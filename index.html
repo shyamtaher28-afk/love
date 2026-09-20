@@ -25,53 +25,7 @@ body{
     color:white;
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
-}
-
-
-/* =====================================================
-   LOADING SCREEN
-===================================================== */
-
-.loader{
-    position:fixed;
-    inset:0;
-    background:#07030c;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:99999;
-    transition:1s;
-}
-
-.loader.hide{
-    opacity:0;
-    visibility:hidden;
-}
-
-.loader-heart{
-    font-size:70px;
-    animation:heartbeat 1.2s infinite;
-}
-
-.loader-text{
-    margin-top:20px;
-    font-size:11px;
-    letter-spacing:5px;
-    color:#d9a7cf;
-}
-
-@keyframes heartbeat{
-
-    0%,100%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.25);
-    }
-}
-
+}
 
 /* =====================================================
    BACKGROUND
@@ -1128,19 +1082,6 @@ footer span{
 <body>
 
 
-<!-- =====================================================
-     LOADING
-===================================================== -->
-
-<div class="loader" id="loader">
-
-    <div class="loader-heart">❤️</div>
-
-    <div class="loader-text">
-        ENTERING OUR STORY
-    </div>
-
-</div>
 
 
 <!-- =====================================================
