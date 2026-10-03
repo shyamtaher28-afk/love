@@ -1,1027 +1,1228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Me & Insiyah ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07030c;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   LOADING SCREEN
+===================================================== */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#07030c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:99999;
+    transition:1s;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-heart{
+    font-size:70px;
+    animation:heartbeat 1.2s infinite;
+}
+
+.loader-text{
+    margin-top:20px;
+    font-size:11px;
+    letter-spacing:5px;
+    color:#d9a7cf;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.25);
+    }
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-5;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(125,35,105,.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #09040e,
+            #120715 50%,
+            #050208
+        );
+}
+
+
+/* glowing orbs */
+
+.orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.35;
+}
+
+.orb.one{
+    width:400px;
+    height:400px;
+    background:#8b176d;
+    top:-200px;
+    left:-150px;
+}
+
+.orb.two{
+    width:350px;
+    height:350px;
+    background:#4d197a;
+    right:-150px;
+    bottom:10%;
+}
+
+.orb.three{
+    width:250px;
+    height:250px;
+    background:#b52c88;
+    left:40%;
+    bottom:-150px;
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.stars,
+.stars2,
+.stars3{
+    position:absolute;
+    inset:0;
+    background-repeat:repeat;
+}
+
+.stars{
+    background-image:
+        radial-gradient(1px 1px at 10% 20%,#fff,transparent),
+        radial-gradient(1px 1px at 30% 70%,#fff,transparent),
+        radial-gradient(1px 1px at 60% 30%,#fff,transparent),
+        radial-gradient(1px 1px at 80% 80%,#fff,transparent),
+        radial-gradient(1px 1px at 90% 15%,#fff,transparent),
+        radial-gradient(1px 1px at 45% 50%,#fff,transparent);
+    background-size:300px 300px;
+    animation:starsMove 25s linear infinite;
+}
+
+.stars2{
+    background-image:
+        radial-gradient(2px 2px at 20% 40%,#f9b9e9,transparent),
+        radial-gradient(1px 1px at 70% 20%,#fff,transparent),
+        radial-gradient(2px 2px at 85% 60%,#eab4ff,transparent);
+    background-size:500px 500px;
+    animation:starsMove 40s linear infinite reverse;
+}
+
+@keyframes starsMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-300px);
+    }
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1150px;
+    padding:14px 22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    z-index:1000;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.35);
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#f39bd9;
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+}
+
+.nav-links a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff9cda;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 20px 80px;
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+
+/* small heading */
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    color:#d6abc9;
+    font-size:11px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+
+    margin-bottom:25px;
 
-    <title>Me & Insiyah ❤️ | Our Memories</title>
+    animation:fadeDown 1s ease;
+}
 
-    <style>
+.eyebrow::before,
+.eyebrow::after{
+    content:"";
+    width:35px;
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #c87bab
+    );
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
 
-        body {
-            font-family: "Segoe UI", sans-serif;
-            color: white;
-            background:
-                radial-gradient(circle at 15% 20%, rgba(170, 50, 190, 0.20), transparent 35%),
-                radial-gradient(circle at 85% 70%, rgba(255, 70, 150, 0.16), transparent 35%),
-                linear-gradient(135deg, #08000f, #16001f, #280035, #100018);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+/* main title */
 
-        /* ================= NAVBAR ================= */
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-weight:400;
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
+    font-size:clamp(55px,11vw,135px);
 
-            padding: 17px 25px;
+    line-height:.95;
 
-            display: flex;
-            justify-content: center;
+    letter-spacing:-3px;
 
-            background: rgba(8, 0, 15, 0.78);
-            backdrop-filter: blur(18px);
+    margin-bottom:30px;
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
+    animation:fadeUp 1.2s ease;
+}
 
-        nav ul {
-            list-style: none;
+.hero h1 .me{
+    display:block;
+    color:#fff;
+}
 
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+.hero h1 .insiyah{
+    display:block;
 
-            gap: 15px;
-        }
+    background:
+        linear-gradient(
+            90deg,
+            #d57bb9,
+            #fff,
+            #d57bb9
+        );
 
-        nav a {
-            color: #cfc4d1;
-            text-decoration: none;
-            font-size: 12px;
+    background-size:200%;
 
-            transition: 0.3s;
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 
-            white-space: nowrap;
-        }
+    animation:shimmer 4s linear infinite;
+}
 
-        nav a:hover,
-        nav a.active {
-            color: #ff82bb;
+@keyframes shimmer{
 
-            text-shadow:
-                0 0 10px rgba(255, 105, 180, 0.7);
-        }
+    0%{
+        background-position:0%;
+    }
 
+    100%{
+        background-position:200%;
+    }
+}
 
-        /* ================= HERO ================= */
 
-        .hero {
-            min-height: 100vh;
+/* subtitle */
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.hero-description{
+    max-width:650px;
+    margin:auto;
 
-            text-align: center;
+    color:#cfc2ce;
 
-            padding: 130px 20px 80px;
+    font-size:16px;
+    line-height:1.9;
 
-            position: relative;
-        }
+    animation:fadeUp 1.5s ease;
+}
 
-        .hero-content {
-            max-width: 950px;
 
-            animation: heroAppear 1.5s ease;
-        }
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
 
-        .welcome {
-            color: #ff8cbd;
+.buttons{
+    margin-top:40px;
 
-            font-size: 13px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
 
-            letter-spacing: 5px;
+    flex-wrap:wrap;
 
-            text-transform: uppercase;
+    animation:fadeUp 1.8s ease;
+}
 
-            margin-bottom: 28px;
-        }
+.btn{
+    position:relative;
 
-        .main-heart {
-            font-size: 75px;
+    padding:15px 30px;
 
-            display: inline-block;
+    border-radius:50px;
 
-            animation: heartbeat 2s infinite;
+    text-decoration:none;
 
-            filter:
-                drop-shadow(0 0 20px rgba(255,70,150,0.7));
+    font-size:13px;
+    font-weight:500;
 
-            margin-bottom: 20px;
-        }
+    transition:.4s;
 
-        .hero h1 {
-            font-family: Georgia, serif;
+    overflow:hidden;
+}
 
-            font-weight: normal;
+.btn-primary{
+    color:white;
 
-            font-size: clamp(55px, 10vw, 110px);
+    background:
+        linear-gradient(
+            135deg,
+            #9d3b7d,
+            #d56eae
+        );
 
-            line-height: 1.05;
+    box-shadow:
+        0 10px 30px rgba(202,77,157,.3);
+}
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #ffffff,
-                    #ffb0d2,
-                    #d991ff,
-                    #ffffff
-                );
+.btn-primary:hover{
+    transform:translateY(-5px);
+    box-shadow:
+        0 15px 45px rgba(202,77,157,.5);
+}
 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+.btn-secondary{
+    color:#eee;
 
-            margin-bottom: 25px;
-        }
+    background:rgba(255,255,255,.06);
 
-        .hero h2 {
-            font-family: Georgia, serif;
+    border:1px solid rgba(255,255,255,.15);
 
-            font-weight: normal;
+    backdrop-filter:blur(10px);
+}
 
-            font-size: clamp(20px, 4vw, 32px);
+.btn-secondary:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.12);
+}
 
-            color: #f1dce9;
 
-            margin-bottom: 25px;
-        }
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
 
-        .hero p {
-            max-width: 720px;
+.scroll{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
 
-            margin: auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-            color: #bbaebe;
+    color:#8e788c;
 
-            font-size: 16px;
+    font-size:9px;
+    letter-spacing:3px;
+}
 
-            line-height: 1.9;
-        }
+.scroll-line{
+    width:1px;
+    height:40px;
+    margin-top:10px;
 
-        .hero-buttons {
-            margin-top: 40px;
+    background:
+        linear-gradient(
+            #d58abb,
+            transparent
+        );
 
-            display: flex;
+    animation:scrollLine 2s infinite;
+}
 
-            justify-content: center;
+@keyframes scrollLine{
 
-            flex-wrap: wrap;
+    0%,100%{
+        transform:scaleY(.5);
+        transform-origin:top;
+    }
 
-            gap: 15px;
-        }
+    50%{
+        transform:scaleY(1);
+    }
+}
 
-        .btn {
-            display: inline-block;
 
-            padding: 14px 30px;
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
 
-            border-radius: 30px;
+.heart{
+    position:fixed;
+    bottom:-50px;
 
-            text-decoration: none;
+    pointer-events:none;
 
-            color: white;
+    opacity:0;
 
-            border: 1px solid rgba(255,130,190,0.45);
+    z-index:2;
 
-            background: rgba(255,105,180,0.07);
+    animation:floatHeart 12s linear infinite;
+}
 
-            transition: 0.35s;
-        }
+.h1{
+    left:10%;
+    animation-delay:0s;
+}
 
-        .btn:hover {
-            transform: translateY(-4px);
+.h2{
+    left:30%;
+    animation-delay:4s;
+}
 
-            background: rgba(255,105,180,0.14);
+.h3{
+    left:55%;
+    animation-delay:7s;
+}
 
-            box-shadow:
-                0 10px 30px rgba(255,70,150,0.18);
-        }
+.h4{
+    left:78%;
+    animation-delay:2s;
+}
 
-        .btn.primary {
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,90,160,0.25),
-                    rgba(180,70,220,0.20)
-                );
-        }
+.h5{
+    left:92%;
+    animation-delay:9s;
+}
 
+@keyframes floatHeart{
 
-        /* ================= COMMON SECTION ================= */
+    0%{
+        transform:translateY(0) scale(.6);
+        opacity:0;
+    }
 
-        section {
-            max-width: 1150px;
+    15%{
+        opacity:.6;
+    }
 
-            margin: auto;
+    80%{
+        opacity:.35;
+    }
 
-            padding: 100px 20px;
+    100%{
+        transform:
+            translateY(-110vh)
+            translateX(50px)
+            rotate(25deg)
+            scale(1.1);
 
-            text-align: center;
-        }
+        opacity:0;
+    }
+}
 
-        .section-label {
-            color: #ff78b5;
 
-            font-size: 12px;
+/* =====================================================
+   SECTION
+===================================================== */
 
-            letter-spacing: 4px;
+.section{
+    padding:120px 7%;
+    position:relative;
+}
 
-            text-transform: uppercase;
+.section-heading{
+    text-align:center;
+    margin-bottom:55px;
+}
 
-            margin-bottom: 14px;
-        }
+.section-heading small{
+    color:#b879a1;
+    letter-spacing:4px;
+    font-size:10px;
+    text-transform:uppercase;
+}
 
-        .section-title {
-            font-family: Georgia, serif;
+.section-heading h2{
+    font-family:'Cinzel',serif;
+    font-size:clamp(35px,5vw,60px);
+    font-weight:400;
+    margin-top:12px;
+}
 
-            font-size: clamp(35px, 5vw, 55px);
+.section-heading h2 span{
+    color:#e58ac4;
+}
 
-            font-weight: normal;
 
-            margin-bottom: 20px;
-        }
+/* =====================================================
+   STORY CARD
+===================================================== */
 
-        .section-description {
-            max-width: 700px;
+.story-container{
+    max-width:950px;
+    margin:auto;
+}
 
-            margin: auto;
+.story-card{
+    position:relative;
 
-            color: #bcaec0;
+    padding:60px;
 
-            line-height: 1.9;
+    border-radius:35px;
 
-            font-size: 15px;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
 
+    border:1px solid rgba(255,255,255,.13);
 
-        /* ================= WELCOME CARD ================= */
+    backdrop-filter:blur(25px);
 
-        .welcome-card {
-            max-width: 850px;
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.3);
 
-            margin: 50px auto 0;
+    overflow:hidden;
+}
 
-            padding: 50px 40px;
+.story-card::before{
+    content:"";
+    position:absolute;
 
-            border-radius: 25px;
+    width:250px;
+    height:250px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.055),
-                    rgba(255,105,180,0.035)
-                );
+    background:#b52c88;
 
-            border: 1px solid rgba(255,255,255,0.09);
+    filter:blur(100px);
 
-            box-shadow:
-                0 25px 70px rgba(0,0,0,0.25);
-        }
+    opacity:.12;
 
-        .welcome-card p {
-            color: #d2c4d4;
+    top:-100px;
+    right:-100px;
+}
 
-            line-height: 2;
+.story-card::after{
+    content:"❝";
 
-            margin-bottom: 20px;
-        }
+    position:absolute;
 
-        .signature {
-            color: #ff91bf;
+    top:20px;
+    left:35px;
 
-            font-family: Georgia, serif;
+    font-family:Georgia,serif;
+    font-size:80px;
 
-            font-size: 20px;
+    color:rgba(255,255,255,.06);
+}
 
-            margin-top: 30px;
-        }
+.story-card p{
+    position:relative;
 
+    color:#d6cbd5;
 
-        /* ================= MEMORY PREVIEW ================= */
+    text-align:center;
 
-        .memory-grid {
-            display: grid;
+    line-height:2;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    font-size:16px;
 
-            gap: 20px;
+    z-index:2;
+}
 
-            margin-top: 55px;
-        }
 
-        .memory-card {
-            padding: 35px 25px;
+/* =====================================================
+   MEMORY CARDS
+===================================================== */
 
-            border-radius: 20px;
+.memory-grid{
+    max-width:1150px;
+    margin:auto;
 
-            text-align: left;
+    display:grid;
 
-            background:
-                rgba(255,255,255,0.035);
+    grid-template-columns:
+        repeat(4,1fr);
 
-            border:
-                1px solid rgba(255,255,255,0.08);
+    gap:18px;
+}
 
-            transition: 0.4s;
-        }
+.memory-card{
+    position:relative;
 
-        .memory-card:hover {
-            transform: translateY(-8px);
+    min-height:190px;
 
-            border-color:
-                rgba(255,110,180,0.35);
+    padding:30px 20px;
 
-            box-shadow:
-                0 20px 45px rgba(0,0,0,0.25);
-        }
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-        .memory-icon {
-            font-size: 35px;
+    text-align:center;
 
-            margin-bottom: 18px;
-        }
+    text-decoration:none;
+    color:white;
 
-        .memory-card h3 {
-            font-family: Georgia, serif;
+    border-radius:25px;
 
-            font-weight: normal;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.025)
+        );
 
-            color: #ff9cc7;
+    border:1px solid rgba(255,255,255,.1);
 
-            font-size: 22px;
+    backdrop-filter:blur(15px);
 
-            margin-bottom: 12px;
-        }
+    transition:.45s;
 
-        .memory-card p {
-            color: #a99cab;
+    overflow:hidden;
+}
 
-            line-height: 1.7;
+.memory-card::before{
+    content:"";
 
-            font-size: 14px;
-        }
+    position:absolute;
 
-        .memory-link {
-            display: inline-block;
+    width:100px;
+    height:100px;
 
-            margin-top: 20px;
+    border-radius:50%;
 
-            color: #ff81b9;
+    background:#d54eaa;
 
-            text-decoration: none;
+    filter:blur(60px);
 
-            font-size: 13px;
-        }
+    opacity:0;
 
+    transition:.45s;
+}
 
-        /* ================= WEBSITE MAP ================= */
+.memory-card:hover{
+    transform:
+        translateY(-10px)
+        scale(1.02);
 
-        .page-grid {
-            display: grid;
+    border-color:
+        rgba(230,130,194,.4);
 
-            grid-template-columns:
-                repeat(4, 1fr);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
+}
 
-            gap: 15px;
+.memory-card:hover::before{
+    opacity:.3;
+}
 
-            margin-top: 55px;
-        }
+.icon{
+    font-size:38px;
+    margin-bottom:18px;
 
-        .page-card {
-            text-decoration: none;
+    position:relative;
+    z-index:2;
 
-            color: white;
+    transition:.4s;
+}
 
-            padding: 25px 15px;
+.memory-card:hover .icon{
+    transform:scale(1.15);
+}
 
-            border-radius: 17px;
+.memory-card h3{
+    position:relative;
+    z-index:2;
 
-            background:
-                rgba(255,255,255,0.035);
+    font-family:'Cinzel',serif;
+    font-weight:400;
 
-            border:
-                1px solid rgba(255,255,255,0.08);
+    font-size:17px;
 
-            transition: 0.35s;
-        }
+    margin-bottom:8px;
+}
 
-        .page-card:hover {
-            transform: translateY(-5px);
+.memory-card p{
+    position:relative;
+    z-index:2;
 
-            background:
-                rgba(255,105,180,0.08);
+    color:#a99ca8;
 
-            border-color:
-                rgba(255,105,180,0.3);
-        }
+    font-size:11px;
+}
 
-        .page-card .icon {
-            font-size: 28px;
 
-            margin-bottom: 10px;
-        }
+/* =====================================================
+   SPECIAL QUOTE
+===================================================== */
 
-        .page-card h3 {
-            font-size: 14px;
+.quote-section{
+    min-height:60vh;
 
-            font-weight: 500;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-            color: #e5d8e5;
-        }
+    text-align:center;
 
+    padding:100px 20px;
 
-        /* ================= QUOTE ================= */
+    position:relative;
+}
 
-        .quote-section {
-            min-height: 500px;
+.quote-content{
+    max-width:850px;
+}
 
-            display: flex;
+.quote-symbol{
+    font-family:Georgia,serif;
+    font-size:80px;
+    color:#a94c87;
+    opacity:.5;
+}
 
-            justify-content: center;
+.quote-section h2{
+    font-family:'Cinzel',serif;
+    font-size:clamp(30px,5vw,60px);
+    font-weight:400;
+    line-height:1.5;
+}
 
-            align-items: center;
-        }
+.quote-section h2 span{
+    color:#df88be;
+}
 
-        .quote-box {
-            max-width: 850px;
-        }
+.quote-section p{
+    margin-top:25px;
+    color:#817582;
+    font-size:12px;
+    letter-spacing:2px;
+}
 
-        .quote-mark {
-            font-family: Georgia, serif;
 
-            font-size: 75px;
+/* =====================================================
+   FINAL DIVIDER
+===================================================== */
 
-            color: #ff73ae;
+.divider{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
 
-            opacity: 0.6;
-        }
+    color:#a66d94;
+    font-size:14px;
+}
 
-        .quote-box h2 {
-            font-family: Georgia, serif;
+.divider::before,
+.divider::after{
+    content:"";
+    width:100px;
+    height:1px;
 
-            font-weight: normal;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7d466b
+        );
+}
 
-            font-size: clamp(28px, 5vw, 52px);
 
-            line-height: 1.45;
+/* =====================================================
+   FOOTER
+===================================================== */
 
-            color: #f4e5ed;
-        }
+footer{
+    padding:50px 20px;
 
-        .quote-box p {
-            margin-top: 25px;
+    text-align:center;
 
-            color: #8e8292;
+    border-top:1px solid rgba(255,255,255,.07);
 
-            letter-spacing: 2px;
+    color:#746774;
 
-            font-size: 12px;
-        }
+    font-size:11px;
+    letter-spacing:.5px;
+}
 
+footer .footer-title{
+    font-family:'Cinzel',serif;
 
-        /* ================= FINAL ================= */
+    color:#c88ab1;
 
-        .final-box {
-            padding: 75px 25px;
+    font-size:18px;
 
-            border-radius: 30px;
+    margin-bottom:12px;
+}
 
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(255,70,150,0.12),
-                    transparent 70%
-                );
-        }
+footer span{
+    color:#dc83b9;
+}
 
-        .final-box .heart {
-            font-size: 55px;
 
-            margin-bottom: 20px;
-        }
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
 
-        .final-box h2 {
-            font-family: Georgia, serif;
+.music{
+    position:fixed;
 
-            font-size: clamp(35px, 6vw, 65px);
+    right:25px;
+    bottom:25px;
 
-            font-weight: normal;
+    width:55px;
+    height:55px;
 
-            margin-bottom: 20px;
-        }
+    border-radius:50%;
 
-        .final-box p {
-            max-width: 650px;
+    border:1px solid rgba(255,255,255,.15);
 
-            margin: auto;
+    background:
+        rgba(30,10,30,.7);
 
-            color: #afa2b1;
+    backdrop-filter:blur(15px);
 
-            line-height: 1.9;
-        }
+    color:white;
 
+    font-size:20px;
 
-        /* ================= FOOTER ================= */
+    cursor:pointer;
 
-        footer {
-            text-align: center;
+    z-index:2000;
 
-            padding: 40px 20px;
+    transition:.4s;
 
-            border-top:
-                1px solid rgba(255,255,255,0.07);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.4);
+}
 
-            color: #7e7182;
+.music:hover{
+    transform:scale(1.1);
 
-            font-size: 13px;
-        }
+    box-shadow:
+        0 0 30px rgba(218,101,174,.4);
+}
 
-        footer span {
-            color: #ff70ae;
-        }
+.music.playing{
+    animation:musicPulse 1.5s infinite;
+}
 
+@keyframes musicPulse{
 
-        /* ================= FLOATING HEARTS ================= */
+    0%,100%{
+        box-shadow:
+            0 0 0 rgba(220,100,180,0);
+    }
 
-        .floating-heart {
-            position: fixed;
+    50%{
+        box-shadow:
+            0 0 30px rgba(220,100,180,.5);
+    }
+}
 
-            bottom: -30px;
 
-            pointer-events: none;
+/* =====================================================
+   ANIMATIONS
+===================================================== */
 
-            z-index: 0;
+@keyframes fadeUp{
 
-            opacity: 0;
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
 
-            animation:
-                floatHeart linear forwards;
-        }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-        @keyframes floatHeart {
+@keyframes fadeDown{
 
-            0% {
-                transform:
-                    translateY(0)
-                    scale(0.7);
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
 
-                opacity: 0;
-            }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-            15% {
-                opacity: 0.6;
-            }
 
-            100% {
-                transform:
-                    translateY(-110vh)
-                    scale(1.2)
-                    rotate(20deg);
+/* =====================================================
+   MOBILE
+===================================================== */
 
-                opacity: 0;
-            }
-        }
+@media(max-width:900px){
 
+    nav{
+        width:94%;
+    }
 
-        /* ================= REVEAL ================= */
+    .nav-links{
+        gap:12px;
+    }
 
-        .reveal {
-            opacity: 0;
+    .nav-links a{
+        font-size:11px;
+    }
 
-            transform:
-                translateY(35px);
+    .memory-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-            transition:
-                1s ease;
-        }
+}
 
-        .reveal.show {
-            opacity: 1;
 
-            transform:
-                translateY(0);
-        }
+@media(max-width:650px){
 
+    nav{
+        top:10px;
+        padding:13px 16px;
+        border-radius:16px;
+    }
 
-        /* ================= ANIMATIONS ================= */
+    .logo{
+        font-size:14px;
+    }
 
-        @keyframes heartbeat {
+    .nav-links{
+        display:none;
+    }
 
-            0%, 100% {
-                transform: scale(1);
-            }
+    .hero{
+        padding-top:120px;
+    }
 
-            50% {
-                transform: scale(1.12);
-            }
-        }
+    .hero h1{
+        font-size:clamp(52px,17vw,90px);
+        letter-spacing:-2px;
+    }
 
-        @keyframes heroAppear {
+    .hero-description{
+        font-size:14px;
+        line-height:1.8;
+        padding:0 10px;
+    }
 
-            from {
-                opacity: 0;
+    .eyebrow{
+        font-size:8px;
+        letter-spacing:3px;
+    }
 
-                transform:
-                    translateY(30px);
-            }
+    .eyebrow::before,
+    .eyebrow::after{
+        width:20px;
+    }
 
-            to {
-                opacity: 1;
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
 
-                transform:
-                    translateY(0);
-            }
-        }
+    .btn{
+        width:230px;
+    }
 
+    .section{
+        padding:80px 18px;
+    }
 
-        /* ================= RESPONSIVE ================= */
+    .story-card{
+        padding:35px 22px;
+        border-radius:25px;
+    }
 
-        @media (max-width: 900px) {
+    .story-card p{
+        font-size:14px;
+        line-height:1.9;
+    }
 
-            .memory-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+    .memory-grid{
+        grid-template-columns:
+            repeat(2,1fr);
 
-            .page-grid {
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
+        gap:10px;
+    }
 
-            nav ul {
-                gap: 10px;
-            }
+    .memory-card{
+        min-height:155px;
+        padding:20px 10px;
+        border-radius:20px;
+    }
 
-            nav a {
-                font-size: 11px;
-            }
-        }
+    .icon{
+        font-size:30px;
+        margin-bottom:12px;
+    }
 
+    .memory-card h3{
+        font-size:14px;
+    }
 
-        @media (max-width: 600px) {
+    .memory-card p{
+        font-size:9px;
+    }
 
-            nav {
-                position: relative;
+    .quote-section{
+        min-height:50vh;
+    }
 
-                padding: 15px 10px;
-            }
+    .quote-symbol{
+        font-size:60px;
+    }
 
-            nav ul {
-                gap: 9px 12px;
-            }
+    .music{
+        width:50px;
+        height:50px;
+        right:18px;
+        bottom:18px;
+    }
 
-            nav a {
-                font-size: 10px;
-            }
+}
 
-            .hero {
-                padding-top: 80px;
-            }
 
-            .main-heart {
-                font-size: 55px;
-            }
+@media(max-width:380px){
 
-            .memory-grid {
-                grid-template-columns: 1fr;
-            }
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
 
-            .page-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+    .memory-card{
+        min-height:130px;
+    }
 
-            section {
-                padding:
-                    75px 18px;
-            }
+}
 
-            .welcome-card {
-                padding:
-                    35px 22px;
-            }
-
-        }
-
-    </style>
-
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- ================= NAVIGATION ================= -->
+<!-- =====================================================
+     LOADING
+===================================================== -->
 
-    <nav>
+<div class="loader" id="loader">
 
-        <ul>
+    <div class="loader-heart">❤️</div>
 
-            <li>
-                <a href="index.html" class="active">
-                    Home
-                </a>
-            </li>
+    <div class="loader-text">
+        ENTERING OUR STORY
+    </div>
 
-            <li>
-                <a href="our-story.html">
-                    Our Story
-                </a>
-            </li>
-
-            <li>
-                <a href="timeline.html">
-                    Timeline
-                </a>
-            </li>
-
-            <li>
-                <a href="memories.html">
-                    Memories
-                </a>
-            </li>
-
-            <li>
-                <a href="gallery.html">
-                    Gallery
-                </a>
-            </li>
-
-            <li>
-                <a href="letters.html">
-                    Letters
-                </a>
-            </li>
-
-            <li>
-                <a href="songs.html">
-                    Songs
-                </a>
-            </li>
-
-            <li>
-                <a href="special-moments.html">
-                    Moments
-                </a>
-            </li>
-
-            <li>
-                <a href="future.html">
-                    Future
-                </a>
-            </li>
-
-            <li>
-                <a href="thought.html">
-                    Thoughts
-                </a>
-            </li>
-
-            <li>
-                <a href="promises.html">
-                    Promises
-                </a>
-            </li>
-
-            <li>
-                <a href="memory-box.html">
-                    Memory Box
-                </a>
-            </li>
-
-            <li>
-                <a href="search.html">
-                    Search
-                </a>
-            </li>
-
-            <li>
-                <a href="final.html">
-                    Final
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
+</div>
 
 
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
 
-    <!-- ================= HERO ================= -->
+<div class="background">
 
-    <header class="hero">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
 
-        <div class="hero-content">
+    <div class="stars"></div>
+    <div class="stars2"></div>
 
-            <div class="welcome">
-                Welcome To Our Little World
-            </div>
-
-            <div class="main-heart">
-                ❤️
-            </div>
-
-            <h1>
-                Me & Insiyah
-            </h1>
-
-            <h2>
-                A Story Made Of Little Moments
-            </h2>
-
-            <p>
-                This isn't just a website.
-                It's a place where memories, thoughts,
-                photographs, songs, letters and feelings
-                come together in one little corner of the internet.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="our-story.html" class="btn primary">
-                    ✨ Enter Our Story
-                </a>
-
-                <a href="#explore" class="btn">
-                    ↓ Explore
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
+</div>
 
 
+<!-- =====================================================
+     FLOATING HEARTS
+===================================================== -->
 
-    <!-- ================= INTRODUCTION ================= -->
+<div class="heart h1">♡</div>
+<div class="heart h2">♥</div>
+<div class="heart h3">♡</div>
+<div class="heart h4">♥</div>
+<div class="heart h5">♡</div>
 
-    <section>
 
-        <div class="reveal">
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-            <div class="section-label">
-                Before You Begin
-            </div>
+<nav>
 
-            <h2 class="section-title">
-                Why This Exists
-            </h2>
+    <div class="logo">
+        Me & <span>Insiyah</span>
+    </div>
 
-            <p class="section-description">
-                Some moments are too important to simply disappear
-                into the past. So this little website was created
-                as a place to keep them.
-            </p>
+    <div class="nav-links">
 
+        <a href="index.html">Home</a>
+
+        <a href="memories.html">Memories</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="letter.html">Letter</a>
+
+        <a href="songs.html">Songs</a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            A story worth remembering
         </div>
 
 
-        <div class="welcome-card reveal">
+        <h1>
 
-            <p>
-                There are memories that don't need a special reason
-                to stay with us.
-            </p>
+            <span class="me">
+                Me &
+            </span>
 
-            <p>
-                A conversation.
-                A smile.
-                A song.
-                A random joke.
-                A difficult day.
-                A simple moment that somehow became important.
-            </p>
+            <span class="insiyah">
+                Insiyah
+            </span>
 
-            <p>
-                This website brings those moments together —
-                not as a perfect story, but as a collection
-                of real moments that once mattered.
-            </p>
-
-            <div class="signature">
-                — Taher ❤️
-            </div>
-
-        </div>
-
-    </section>
+        </h1>
 
 
+        <p class="hero-description">
 
-    <!-- ================= MEMORY PREVIEW ================= -->
-
-    <section id="explore">
-
-        <div class="reveal">
-
-            <div class="section-label">
-                Explore
-            </div>
-
-            <h2 class="section-title">
-                A Few Pieces Of Our Story
-            </h2>
-
-            <p class="section-description">
-                Every section holds a different part of the journey.
-                Start anywhere. Every page leads to another piece
-                of the story.
-            </p>
-
-        </div>
-
-
-        <div class="memory-grid">
-
-
-            <!-- STORY -->
-
-            <div class="memory-card reveal">
-
-                <div class="memory-icon">
-                    🌱
-                </div>
-
-                <h3>
-                    Our Story
-                </h3>
-
-                <p>
-                    Where everything began and how a few simple
-                    moments became something worth remembering.
-                </p>
-
-                <a
-                    href="our-story.html"
-                    class="memory-link"
-                >
-                    Read Our Story →
-                </a>
-
-            </div>
-
-
-            <!-- MEMORIES -->
-
-            <div class="memory-card reveal">
-
-                <div class="memory-icon">
-                    💭
-                </div>
-
-                <h3>
-                    Our Memories
-                </h3>
-
-                <p>
-                    The little moments, conversations,
-                    smiles and memories that stayed.
-                </p>
-
-                <a
-                    href="memories.html"
-                    class="memory-link"
-                >
-                    Open Memories →
-                </a>
-
-            </div>
-
-
-            <!-- GALLERY -->
-
-            <div class="memory-card reveal">
-
-                <div class="memory-icon">
-                    📸
-                </div>
-
-                <h3>
-                    Our Gallery
-                </h3>
-
-                <p>
-                    A visual collection of photographs
-                    connected to moments that mattered.
-                </p>
-
-                <a
-                    href="gallery.html"
-                    class="memory-link".
-               
+            Some moments pass quie
