@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +31,9 @@ body {
 }
 
 body {
-
     background: #111;
-
     font-family: Arial, sans-serif;
-
     overflow: hidden;
-
     color: #554548;
 }
 
@@ -95,30 +92,20 @@ body {
 }
 
 .screen.active {
-
     display: flex;
-
 }
 
 
 @keyframes screenIn {
 
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(20px);
-
+        transform: translateY(20px);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
     }
 
 }
@@ -140,8 +127,7 @@ body {
 
     margin-bottom: 15px;
 
-    min-height: 35px;
-
+    min-height: 38px;
 }
 
 
@@ -175,8 +161,6 @@ body {
 
     transition: .25s;
 
-    flex-shrink: 0;
-
 }
 
 
@@ -198,12 +182,8 @@ body {
 }
 
 
-/* Empty space on screens */
-
 .topbar-space {
-
     width: 38px;
-
 }
 
 
@@ -216,9 +196,7 @@ body {
     text-align: center;
 
     margin:
-        8px
-        0
-        28px;
+        8px 0 28px;
 
     color: #c99d9b;
 
@@ -236,7 +214,6 @@ h2 {
     font-family: Georgia, serif;
 
     font-weight: 500;
-
 }
 
 
@@ -247,7 +224,6 @@ h2 {
     line-height: 1.15;
 
     text-align: center;
-
 }
 
 
@@ -262,7 +238,6 @@ h2 {
     font-style: italic;
 
     font-size: 20px;
-
 }
 
 
@@ -273,7 +248,6 @@ h2 {
     font-size: 12px;
 
     line-height: 1.7;
-
 }
 
 
@@ -284,7 +258,6 @@ h2 {
     align-items: center;
 
     text-align: center;
-
 }
 
 
@@ -297,8 +270,7 @@ h2 {
     border: none;
 
     padding:
-        14px
-        28px;
+        14px 28px;
 
     border-radius: 50px;
 
@@ -322,16 +294,14 @@ h2 {
 
 .btn:hover {
 
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
 }
 
 
 .btn:active {
 
-    transform:
-        scale(.95);
+    transform: scale(.95);
 
 }
 
@@ -351,7 +321,6 @@ h2 {
     margin: 35px auto;
 
     cursor: pointer;
-
 }
 
 
@@ -372,7 +341,6 @@ h2 {
     box-shadow:
         0 20px 35px
         rgba(100,70,65,.2);
-
 }
 
 
@@ -400,7 +368,6 @@ h2 {
     transition: 1s;
 
     z-index: 4;
-
 }
 
 
@@ -422,7 +389,6 @@ h2 {
 
     border-top:
         75px solid transparent;
-
 }
 
 
@@ -456,7 +422,6 @@ h2 {
     z-index: 10;
 
     transition: .5s;
-
 }
 
 
@@ -465,7 +430,6 @@ h2 {
 
     transform:
         rotateX(180deg);
-
 }
 
 
@@ -477,7 +441,6 @@ h2 {
     transform:
         translate(-50%, -70px)
         scale(.5);
-
 }
 
 
@@ -501,24 +464,18 @@ h2 {
 @keyframes cakeFloat {
 
     0%,100% {
-
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
     }
 
     50% {
-
-        transform:
-            translateY(-10px);
-
+        transform: translateY(-10px);
     }
 
 }
 
 
 /* =========================================================
-   ALBUM
+   PHOTO + VIDEO ALBUM
 ========================================================= */
 
 .album {
@@ -531,11 +488,8 @@ h2 {
     gap: 14px;
 
     margin-top: 25px;
-
 }
 
-
-/* Individual memory card */
 
 .memory-card {
 
@@ -556,7 +510,6 @@ h2 {
     cursor: pointer;
 
     transition: .3s;
-
 }
 
 
@@ -565,33 +518,10 @@ h2 {
     transform:
         translateY(-5px)
         rotate(-1deg);
-
 }
 
 
-/* =========================================================
-   IMAGE
-========================================================= */
-
-.memory-image {
-
-    width: 100%;
-
-    height: 150px;
-
-    object-fit: cover;
-
-    border-radius: 7px;
-
-    display: block;
-
-}
-
-
-/* =========================================================
-   VIDEO
-========================================================= */
-
+.memory-image,
 .memory-video {
 
     width: 100%;
@@ -605,13 +535,8 @@ h2 {
     display: block;
 
     background: #eee;
-
 }
 
-
-/* =========================================================
-   MEMORY TITLE
-========================================================= */
 
 .memory-title {
 
@@ -622,7 +547,6 @@ h2 {
     font-family: Georgia, serif;
 
     font-size: 14px;
-
 }
 
 
@@ -637,7 +561,6 @@ h2 {
     color: #aa9294;
 
     font-size: 9px;
-
 }
 
 
@@ -665,14 +588,11 @@ h2 {
     flex-direction: column;
 
     padding: 20px;
-
 }
 
 
 .media-viewer.active {
-
     display: flex;
-
 }
 
 
@@ -681,7 +601,6 @@ h2 {
     max-width: 95vw;
 
     max-height: 75vh;
-
 }
 
 
@@ -695,11 +614,8 @@ h2 {
     object-fit: contain;
 
     border-radius: 8px;
-
 }
 
-
-/* CLOSE BUTTON */
 
 .close-viewer {
 
@@ -726,7 +642,6 @@ h2 {
     cursor: pointer;
 
     z-index: 10;
-
 }
 
 
@@ -735,7 +650,6 @@ h2 {
     background: #e89b9f;
 
     color: white;
-
 }
 
 
@@ -750,103 +664,154 @@ h2 {
     font-family: Georgia, serif;
 
     font-size: 18px;
-
 }
 
 
 /* =========================================================
-   FLOWERS
+   ⭐ IMAGE PICKING SECTION
 ========================================================= */
 
-.bouquet {
+.image-picks {
 
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
-    gap: 12px;
+    gap: 14px;
 
-    margin: 25px 0;
-
+    margin-top: 25px;
 }
 
 
-.flower {
+/* Image selection card */
+
+.pick-card {
 
     background: white;
 
     border:
-        1px solid
-        #ead8d4;
+        2px solid
+        transparent;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
-    padding: 9px;
+    padding: 8px;
 
-    text-align: center;
+    box-shadow:
+        0 10px 25px
+        rgba(100,70,65,.10);
 
     cursor: pointer;
 
-    transition: .3s;
+    transition:
+        .35s ease;
 
+    position: relative;
 }
 
 
-.flower:hover {
+.pick-card:hover {
 
     transform:
-        translateY(-4px);
+        translateY(-5px);
 
 }
 
 
-.flower.selected {
+/* Selected image */
+
+.pick-card.selected {
 
     border:
         2px solid
         #e89b9f;
 
     transform:
-        translateY(-5px)
-        scale(1.03);
+        translateY(-7px)
+        scale(1.02);
 
+    box-shadow:
+        0 15px 30px
+        rgba(232,155,159,.30);
 }
 
 
-.flower-icon {
+/* Image */
 
-    background: #fbefeb;
+.pick-image {
 
-    border-radius: 7px;
+    width: 100%;
 
-    padding:
-        15px
-        5px;
+    height: 145px;
 
-    font-size: 45px;
+    object-fit: cover;
 
-}
-
-
-.flower-name {
+    border-radius: 8px;
 
     display: block;
+}
 
-    margin-top: 8px;
 
-    color: #927c80;
+/* Image title */
 
-    font-size: 10px;
+.pick-title {
+
+    text-align: center;
+
+    margin-top: 9px;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    color: #705e61;
+}
+
+
+/* Selected check mark */
+
+.pick-check {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #e89b9f;
+
+    color: white;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 15px;
+
+}
+
+
+.pick-card.selected .pick-check {
+
+    display: flex;
 
 }
 
 
 /* =========================================================
-   WISH CARD
+   SELECTED IMAGE RESULT
 ========================================================= */
 
-.wish-card {
+.selected-memory {
 
     display: none;
 
@@ -856,9 +821,11 @@ h2 {
         1px solid
         #ead8d4;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
-    padding: 22px;
+    padding: 12px;
+
+    margin-top: 20px;
 
     text-align: center;
 
@@ -868,7 +835,37 @@ h2 {
 
     animation:
         pop .5s ease;
+}
 
+
+.selected-memory.show {
+
+    display: block;
+
+}
+
+
+.selected-memory img {
+
+    width: 100%;
+
+    max-height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+.selected-memory-text {
+
+    margin-top: 12px;
+
+    color: #806d70;
+
+    font-size: 12px;
+
+    line-height: 1.8;
 }
 
 
@@ -878,8 +875,7 @@ h2 {
 
         opacity: 0;
 
-        transform:
-            scale(.8);
+        transform: scale(.8);
 
     }
 
@@ -887,30 +883,9 @@ h2 {
 
         opacity: 1;
 
-        transform:
-            scale(1);
+        transform: scale(1);
 
     }
-
-}
-
-
-.wish-flower {
-
-    font-size: 45px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.wish-card p {
-
-    color: #806d70;
-
-    font-size: 12px;
-
-    line-height: 1.8;
 
 }
 
@@ -928,8 +903,7 @@ h2 {
     margin-top: 15px;
 
     padding:
-        30px
-        24px;
+        30px 24px;
 
     background: #fff;
 
@@ -940,7 +914,6 @@ h2 {
     box-shadow:
         0 15px 35px
         rgba(100,70,65,.13);
-
 }
 
 
@@ -955,7 +928,6 @@ h2 {
     border:
         1px dashed
         #efd9d5;
-
 }
 
 
@@ -970,7 +942,6 @@ h2 {
     font-size: 13px;
 
     line-height: 1.8;
-
 }
 
 
@@ -979,7 +950,6 @@ h2 {
     font-size: 27px;
 
     margin-bottom: 18px;
-
 }
 
 
@@ -990,7 +960,6 @@ h2 {
     text-align: right;
 
     font-style: italic;
-
 }
 
 
@@ -1009,7 +978,6 @@ h2 {
     color: #b9a0a0;
 
     font-size: 9px;
-
 }
 
 
@@ -1029,7 +997,6 @@ h2 {
 
     animation:
         heartUp 5s linear forwards;
-
 }
 
 
@@ -1042,13 +1009,10 @@ h2 {
         transform:
             translateY(0)
             scale(.5);
-
     }
 
     15% {
-
         opacity: .8;
-
     }
 
     100% {
@@ -1059,7 +1023,6 @@ h2 {
             translateY(-700px)
             scale(1.2)
             rotate(30deg);
-
     }
 
 }
@@ -1081,7 +1044,6 @@ h2 {
 
     animation:
         confettiFall 3s linear forwards;
-
 }
 
 
@@ -1094,7 +1056,6 @@ h2 {
             rotate(720deg);
 
         opacity: 0;
-
     }
 
 }
@@ -1107,9 +1068,7 @@ h2 {
 @media(max-width:430px) {
 
     body {
-
         background: #fff;
-
     }
 
     .phone {
@@ -1119,7 +1078,26 @@ h2 {
         height: 100vh;
 
         box-shadow: none;
+    }
 
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:360px) {
+
+    .pick-image {
+
+        height: 120px;
+    }
+
+    .memory-image,
+    .memory-video {
+
+        height: 120px;
     }
 
 }
@@ -1139,7 +1117,8 @@ h2 {
 
 
 <!-- =====================================================
-     SCREEN 1 — ENVELOPE
+     SCREEN 1
+     ENVELOPE
 ===================================================== -->
 
 <section
@@ -1206,7 +1185,8 @@ h2 {
 
 
 <!-- =====================================================
-     SCREEN 2 — BIRTHDAY
+     SCREEN 2
+     BIRTHDAY
 ===================================================== -->
 
 <section
@@ -1217,8 +1197,6 @@ h2 {
 
     <div class="topbar">
 
-        <!-- Back button -->
-
         <button
             class="back-btn"
             onclick="goBack()"
@@ -1226,7 +1204,6 @@ h2 {
         >
             ←
         </button>
-
 
         <div class="topbar-space"></div>
 
@@ -1294,7 +1271,8 @@ h2 {
 
 
 <!-- =====================================================
-     SCREEN 3 — ALBUM
+     SCREEN 3
+     PHOTO + VIDEO ALBUM
 ===================================================== -->
 
 <section
@@ -1304,7 +1282,6 @@ h2 {
 
 
     <div class="topbar">
-
 
         <button
             class="back-btn"
@@ -1333,7 +1310,6 @@ h2 {
 
 
         <div class="topbar-space"></div>
-
 
     </div>
 
@@ -1370,11 +1346,6 @@ h2 {
     </p>
 
 
-    <!--
-        ALL PHOTOS AND VIDEOS
-        WILL BE CREATED HERE
-    -->
-
     <div
         class="album"
         id="album"
@@ -1406,7 +1377,8 @@ h2 {
 
 
 <!-- =====================================================
-     SCREEN 4 — FLOWERS
+     SCREEN 4
+     PICK ONE IMAGE
 ===================================================== -->
 
 <section
@@ -1416,7 +1388,6 @@ h2 {
 
 
     <div class="topbar">
-
 
         <button
             class="back-btn"
@@ -1429,15 +1400,29 @@ h2 {
         </button>
 
 
-        <div class="topbar-space"></div>
+        <div
+            style="
+            flex:1;
+            text-align:center;
+            font-family:Georgia,serif;
+            color:#c77f84;
+            font-size:13px;
+            "
+        >
 
+            ONE SPECIAL MEMORY
+
+        </div>
+
+
+        <div class="topbar-space"></div>
 
     </div>
 
 
     <div class="topline">
 
-        A TINY BOUQUET OF WISHES
+        A LITTLE CHOICE FOR YOU
 
     </div>
 
@@ -1449,7 +1434,7 @@ h2 {
         "
     >
 
-        Pick one flower
+        Pick one memory
 
     </h1>
 
@@ -1462,92 +1447,44 @@ h2 {
         "
     >
 
-        Each one hides a little wish
+        Choose one of these special moments ♡
 
     </p>
 
 
-    <div class="bouquet">
-
-
-        <div
-            class="flower"
-            onclick="pickFlower(this,'🌸')"
-        >
-
-            <div class="flower-icon">
-                🌸
-            </div>
-
-            <span class="flower-name">
-                PICK ME
-            </span>
-
-        </div>
-
-
-        <div
-            class="flower"
-            onclick="pickFlower(this,'🌼')"
-        >
-
-            <div class="flower-icon">
-                🌼
-            </div>
-
-            <span class="flower-name">
-                PICK ME
-            </span>
-
-        </div>
-
-
-        <div
-            class="flower"
-            onclick="pickFlower(this,'🌷')"
-        >
-
-            <div class="flower-icon">
-                🌷
-            </div>
-
-            <span class="flower-name">
-                PICK ME
-            </span>
-
-        </div>
-
-
-    </div>
-
+    <!--
+        JAVASCRIPT WILL PUT
+        YOUR IMAGES HERE
+    -->
 
     <div
-        class="wish-card"
-        id="wishCard"
+        class="image-picks"
+        id="imagePicks"
+    ></div>
+
+
+    <!-- SELECTED IMAGE -->
+
+    <div
+        class="selected-memory"
+        id="selectedMemory"
     >
+
+        <img
+            id="selectedMemoryImage"
+            src=""
+            alt="Selected memory"
+        >
 
 
         <div
-            class="wish-flower"
-            id="selectedFlower"
+            class="selected-memory-text"
+            id="selectedMemoryText"
         >
 
-            🌸
+            A beautiful memory ♡
 
         </div>
-
-
-        <p>
-
-            May this year bring you
-            tiny reasons to smile,
-            big reasons to dream,
-            beautiful memories,
-            and people who make
-            ordinary days feel special.
-
-        </p>
-
 
     </div>
 
@@ -1572,7 +1509,8 @@ h2 {
 
 
 <!-- =====================================================
-     SCREEN 5 — FINAL LETTER
+     SCREEN 5
+     FINAL LETTER
 ===================================================== -->
 
 <section
@@ -1582,7 +1520,6 @@ h2 {
 
 
     <div class="topbar">
-
 
         <button
             class="back-btn"
@@ -1596,7 +1533,6 @@ h2 {
 
 
         <div class="topbar-space"></div>
-
 
     </div>
 
@@ -1764,18 +1700,15 @@ h2 {
 
 
 /* =========================================================
-   ⭐⭐⭐ ADD YOUR PHOTOS AND VIDEOS HERE ⭐⭐⭐
+   ⭐⭐⭐ YOUR PHOTOS + VIDEOS ⭐⭐⭐
+=========================================================
 
-   You can add as many as you want.
-
-   type = "image"  → photo
-   type = "video"  → video
+   Add as many photos/videos as you want.
 
 ========================================================= */
 
 
 const memories = [
-
 
     {
         type: "image",
@@ -1783,13 +1716,11 @@ const memories = [
         title: "Our First Memory"
     },
 
-
     {
         type: "image",
         src: "images/photo2.jpg",
         title: "Beautiful Moment"
     },
-
 
     {
         type: "image",
@@ -1797,13 +1728,11 @@ const memories = [
         title: "One More Smile"
     },
 
-
     {
         type: "video",
         src: "videos/video1.mp4",
         title: "A Special Video"
     },
-
 
     {
         type: "image",
@@ -1811,18 +1740,11 @@ const memories = [
         title: "Another Beautiful Memory"
     },
 
-
     {
         type: "video",
         src: "videos/video2.mp4",
         title: "Our Little Video"
     },
-
-
-    /* =====================================================
-       ADD MORE BELOW
-    ===================================================== */
-
 
     {
         type: "image",
@@ -1830,13 +1752,11 @@ const memories = [
         title: "Memory Five"
     },
 
-
     {
         type: "image",
         src: "images/photo6.jpg",
         title: "Memory Six"
     },
-
 
     {
         type: "video",
@@ -1844,13 +1764,77 @@ const memories = [
         title: "Special Video Three"
     }
 
+];
+
+
+
+/* =========================================================
+   ⭐⭐⭐ IMAGES FOR "PICK ONE MEMORY" ⭐⭐⭐
+
+   You can add as many as you want.
+
+========================================================= */
+
+
+const pickImages = [
+
+    {
+        src: "images/pick1.jpg",
+        title: "A Beautiful Smile",
+        message:
+            "This memory will always have a special place in my heart. ♡"
+    },
+
+
+    {
+        src: "images/pick2.jpg",
+        title: "A Special Moment",
+        message:
+            "Some moments are small, but they become unforgettable memories. ♥"
+    },
+
+
+    {
+        src: "images/pick3.jpg",
+        title: "Our Happy Moment",
+        message:
+            "This is one of those memories that makes me smile every time. ♡"
+    },
+
+
+    {
+        src: "images/pick4.jpg",
+        title: "A Memory To Keep",
+        message:
+            "No matter how much time passes, beautiful memories stay with us. ♥"
+    },
+
+
+    /*
+       ADD MORE IMAGES HERE
+
+       {
+           src: "images/pick5.jpg",
+           title: "Another Memory",
+           message:
+               "A beautiful memory just for you. ♡"
+       },
+
+       {
+           src: "images/pick6.jpg",
+           title: "One More Moment",
+           message:
+               "This moment is worth remembering forever. ♥"
+       }
+
+    */
 
 ];
 
 
 
 /* =========================================================
-   CREATE ALBUM
+   CREATE PHOTO + VIDEO ALBUM
 ========================================================= */
 
 function createAlbum() {
@@ -1866,7 +1850,7 @@ function createAlbum() {
 
 
     memories.forEach(
-        function(memory,index) {
+        function(memory) {
 
 
             const card =
@@ -1879,9 +1863,7 @@ function createAlbum() {
                 "memory-card";
 
 
-            /* ===============================
-               IMAGE
-            =============================== */
+            /* IMAGE */
 
             if(
                 memory.type === "image"
@@ -1913,13 +1895,9 @@ function createAlbum() {
             }
 
 
-            /* ===============================
-               VIDEO
-            =============================== */
+            /* VIDEO */
 
-            else if(
-                memory.type === "video"
-            ) {
+            else {
 
 
                 const video =
@@ -1948,12 +1926,6 @@ function createAlbum() {
                     true;
 
 
-                /*
-                   Video preview.
-                   The actual video opens
-                   fullscreen when clicked.
-                */
-
                 card.appendChild(
                     video
                 );
@@ -1961,9 +1933,7 @@ function createAlbum() {
             }
 
 
-            /* ===============================
-               TITLE
-            =============================== */
+            /* TITLE */
 
             const title =
                 document.createElement(
@@ -1984,9 +1954,7 @@ function createAlbum() {
             );
 
 
-            /* ===============================
-               TYPE LABEL
-            =============================== */
+            /* TYPE */
 
             const type =
                 document.createElement(
@@ -2011,18 +1979,13 @@ function createAlbum() {
             );
 
 
-            /* ===============================
-               OPEN MEDIA
-            =============================== */
+            /* OPEN */
 
             card.addEventListener(
                 "click",
                 function() {
 
-                    openMedia(
-                        memory,
-                        index
-                    );
+                    openMedia(memory);
 
                 }
             );
@@ -2040,12 +2003,220 @@ function createAlbum() {
 
 
 /* =========================================================
-   OPEN IMAGE / VIDEO
+   CREATE IMAGE PICKING CARDS
+========================================================= */
+
+function createPickImages() {
+
+
+    const container =
+        document.getElementById(
+            "imagePicks"
+        );
+
+
+    container.innerHTML = "";
+
+
+    pickImages.forEach(
+        function(item,index) {
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "pick-card";
+
+
+            /* IMAGE */
+
+            const image =
+                document.createElement(
+                    "img"
+                );
+
+
+            image.src =
+                item.src;
+
+
+            image.alt =
+                item.title;
+
+
+            image.className =
+                "pick-image";
+
+
+            card.appendChild(
+                image
+            );
+
+
+            /* CHECK MARK */
+
+            const check =
+                document.createElement(
+                    "div"
+                );
+
+
+            check.className =
+                "pick-check";
+
+
+            check.textContent =
+                "✓";
+
+
+            card.appendChild(
+                check
+            );
+
+
+            /* TITLE */
+
+            const title =
+                document.createElement(
+                    "div"
+                );
+
+
+            title.className =
+                "pick-title";
+
+
+            title.textContent =
+                item.title;
+
+
+            card.appendChild(
+                title
+            );
+
+
+            /* CLICK */
+
+            card.addEventListener(
+                "click",
+                function() {
+
+                    selectPickImage(
+                        card,
+                        item
+                    );
+
+                }
+            );
+
+
+            container.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   SELECT ONE IMAGE
+========================================================= */
+
+function selectPickImage(
+    card,
+    item
+) {
+
+
+    /* Remove previous selection */
+
+    document
+        .querySelectorAll(
+            ".pick-card"
+        )
+        .forEach(
+            function(element) {
+
+                element.classList
+                    .remove(
+                        "selected"
+                    );
+
+            }
+        );
+
+
+    /* Select clicked card */
+
+    card.classList.add(
+        "selected"
+    );
+
+
+    /* Show selected image */
+
+    const selectedBox =
+        document.getElementById(
+            "selectedMemory"
+        );
+
+
+    const selectedImage =
+        document.getElementById(
+            "selectedMemoryImage"
+        );
+
+
+    const selectedText =
+        document.getElementById(
+            "selectedMemoryText"
+        );
+
+
+    selectedImage.src =
+        item.src;
+
+
+    selectedImage.alt =
+        item.title;
+
+
+    selectedText.textContent =
+        item.message;
+
+
+    selectedBox.classList.add(
+        "show"
+    );
+
+
+    /* Show final letter button */
+
+    document.getElementById(
+        "letterButton"
+    ).style.display =
+        "block";
+
+
+    createHearts();
+
+}
+
+
+
+/* =========================================================
+   OPEN FULLSCREEN MEDIA
 ========================================================= */
 
 function openMedia(
-    memory,
-    index
+    memory
 ) {
 
 
@@ -2070,9 +2241,7 @@ function openMedia(
     content.innerHTML = "";
 
 
-    /* ===============================
-       IMAGE
-    =============================== */
+    /* IMAGE */
 
     if(
         memory.type === "image"
@@ -2100,9 +2269,7 @@ function openMedia(
     }
 
 
-    /* ===============================
-       VIDEO
-    =============================== */
+    /* VIDEO */
 
     else {
 
@@ -2149,7 +2316,7 @@ function openMedia(
 
 
 /* =========================================================
-   CLOSE MEDIA VIEWER
+   CLOSE VIEWER
 ========================================================= */
 
 function closeViewer() {
@@ -2172,11 +2339,6 @@ function closeViewer() {
     );
 
 
-    /*
-       Remove the video completely
-       so audio stops immediately.
-    */
-
     content.innerHTML = "";
 
 }
@@ -2195,9 +2357,6 @@ const screens =
 
 let currentScreen = 0;
 
-
-
-/* GO TO SPECIFIC SCREEN */
 
 function goTo(number) {
 
@@ -2226,10 +2385,6 @@ function goTo(number) {
         .add("active");
 
 
-    /*
-       Scroll to top.
-    */
-
     screens[currentScreen]
         .scrollTop = 0;
 
@@ -2246,10 +2401,6 @@ function goTo(number) {
 
 function goBack() {
 
-
-    /*
-       Don't go before the first screen.
-    */
 
     if(
         currentScreen <= 0
@@ -2269,7 +2420,7 @@ function goBack() {
 
 
 /* =========================================================
-   ENVELOPE
+   OPEN ENVELOPE
 ========================================================= */
 
 function openEnvelope() {
@@ -2297,61 +2448,6 @@ function openEnvelope() {
         },
         1000
     );
-
-}
-
-
-
-/* =========================================================
-   FLOWER
-========================================================= */
-
-function pickFlower(
-    element,
-    flower
-) {
-
-
-    document
-        .querySelectorAll(
-            ".flower"
-        )
-        .forEach(
-            function(item) {
-
-                item.classList
-                    .remove(
-                        "selected"
-                    );
-
-            }
-        );
-
-
-    element.classList.add(
-        "selected"
-    );
-
-
-    document.getElementById(
-        "selectedFlower"
-    ).textContent =
-        flower;
-
-
-    document.getElementById(
-        "wishCard"
-    ).style.display =
-        "block";
-
-
-    document.getElementById(
-        "letterButton"
-    ).style.display =
-        "block";
-
-
-    createHearts();
 
 }
 
@@ -2512,11 +2608,13 @@ function createConfetti() {
 
 
 /* =========================================================
-   RESTART WEBSITE
+   RESTART
 ========================================================= */
 
 function restart() {
 
+
+    /* Envelope */
 
     document
         .getElementById(
@@ -2526,12 +2624,30 @@ function restart() {
         .remove("open");
 
 
+    /* Selected image */
+
+    document
+        .querySelectorAll(
+            ".pick-card"
+        )
+        .forEach(
+            function(card) {
+
+                card.classList
+                    .remove(
+                        "selected"
+                    );
+
+            }
+        );
+
+
     document
         .getElementById(
-            "wishCard"
+            "selectedMemory"
         )
-        .style.display =
-        "none";
+        .classList
+        .remove("show");
 
 
     document
@@ -2542,22 +2658,6 @@ function restart() {
         "none";
 
 
-    document
-        .querySelectorAll(
-            ".flower"
-        )
-        .forEach(
-            function(item) {
-
-                item.classList
-                    .remove(
-                        "selected"
-                    );
-
-            }
-        );
-
-
     goTo(0);
 
 }
@@ -2565,7 +2665,7 @@ function restart() {
 
 
 /* =========================================================
-   CLOSE VIEWER BY CLICKING OUTSIDE
+   CLICK OUTSIDE VIEWER TO CLOSE
 ========================================================= */
 
 document
@@ -2608,24 +2708,14 @@ document.addEventListener(
         }
 
 
-        /*
-           Keyboard back button.
-        */
-
         if(
             event.key === "Backspace"
         ) {
 
-            /*
-               Don't interfere with
-               typing in inputs.
-            */
 
             if(
-                event.target.tagName !==
-                "INPUT" &&
-                event.target.tagName !==
-                "TEXTAREA"
+                event.target.tagName !== "INPUT" &&
+                event.target.tagName !== "TEXTAREA"
             ) {
 
                 goBack();
@@ -2640,10 +2730,12 @@ document.addEventListener(
 
 
 /* =========================================================
-   START
+   INITIALIZE
 ========================================================= */
 
 createAlbum();
+
+createPickImages();
 
 </script>
 
@@ -2651,3 +2743,4 @@ createAlbum();
 </body>
 
 </html>
+```
