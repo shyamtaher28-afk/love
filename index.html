@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +34,7 @@ body {
     overflow: hidden;
     color: #554548;
 }
+
 
 /* =========================================================
    MAIN PHONE
@@ -666,7 +666,7 @@ h2 {
 
 
 /* =========================================================
-   ⭐ IMAGE PICKING SECTION
+   IMAGE PICKING SECTION
 ========================================================= */
 
 .image-picks {
@@ -889,14 +889,17 @@ h2 {
 
 
 /* =========================================================
-   LETTER
+   FINAL LETTER
+   AUTO HEIGHT ACCORDING TO PARAGRAPH
 ========================================================= */
 
 .letter {
 
     position: relative;
 
-    min-height: 410px;
+    height: auto;
+
+    min-height: unset;
 
     margin-top: 15px;
 
@@ -912,6 +915,8 @@ h2 {
     box-shadow:
         0 15px 35px
         rgba(100,70,65,.13);
+
+    flex-shrink: 0;
 }
 
 
@@ -926,6 +931,8 @@ h2 {
     border:
         1px dashed
         #efd9d5;
+
+    pointer-events: none;
 }
 
 
@@ -940,6 +947,10 @@ h2 {
     font-size: 13px;
 
     line-height: 1.8;
+
+    word-wrap: break-word;
+
+    overflow-wrap: break-word;
 }
 
 
@@ -947,7 +958,17 @@ h2 {
 
     font-size: 27px;
 
+    line-height: 1.25;
+
     margin-bottom: 18px;
+}
+
+
+.letter-content p {
+
+    margin-top: 0;
+
+    margin-bottom: 0;
 }
 
 
@@ -958,6 +979,28 @@ h2 {
     text-align: right;
 
     font-style: italic;
+}
+
+
+/* =========================================================
+   FINAL LETTER SCREEN
+========================================================= */
+
+#screen4 {
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding-bottom: 40px;
+}
+
+
+#screen4 .letter {
+
+    width: 100%;
+
+    box-sizing: border-box;
 }
 
 
@@ -1010,6 +1053,7 @@ h2 {
     }
 
     15% {
+
         opacity: .8;
     }
 
@@ -1066,8 +1110,10 @@ h2 {
 @media(max-width:430px) {
 
     body {
+
         background: #fff;
     }
+
 
     .phone {
 
@@ -1096,6 +1142,24 @@ h2 {
     .memory-video {
 
         height: 120px;
+    }
+
+    .letter {
+
+        padding:
+            25px 18px;
+    }
+
+    .letter-content {
+
+        font-size: 12px;
+
+        line-height: 1.75;
+    }
+
+    .letter-content h1 {
+
+        font-size: 23px;
     }
 
 }
@@ -1200,7 +1264,9 @@ h2 {
             onclick="goBack()"
             aria-label="Back"
         >
+
             ←
+
         </button>
 
         <div class="topbar-space"></div>
@@ -1450,11 +1516,6 @@ h2 {
     </p>
 
 
-    <!--
-        JAVASCRIPT WILL PUT
-        YOUR IMAGES HERE
-    -->
-
     <div
         class="image-picks"
         id="imagePicks"
@@ -1550,64 +1611,98 @@ h2 {
 
             <h1>
 
-                My Madam Ji,
+                My Mithurii my Raddiyaaa my Raddu Raani my Cutie Pie my Kalejaaaa!!
 
             </h1>
 
 
             <p>
 
-                Some people make life brighter
-                without even trying.
-                You are one of those people.
+                I was so excited for this day and I was waiting for your birthday so much because this day is
+                so special for me as it is the day my favourite person was born.
+                I really wanted to make you feel special today and tell you how much you mean to me.
+                Thank you for staying with me through everything through my good days my bad days my
+                overthinking my mistakes and all the ups and downs.
 
             </p>
 
 
-            <br>
+            <br><br>
 
 
             <p>
 
-                I hope today reminds you
-                how loved, appreciated and
-                wonderfully you are.
+                Thank you for never making me feel alone and always being there for me.
+                Your presence itself gives me so much comfort and happiness.
+                Meri Raddiyaaa I really want to become the best version of myself every single day and I
+                promise I will keep trying to be better not only for myself but for you and for the beautiful
+                future I dream with you.
+                You have given me so much confidence in myself which I never knew I could have.
+                Because of your support I feel more confident about facing life and living my life confidently.
+                You believe in me even when sometimes I dont believe in myself and this means more to me
+                than I can explain.
 
             </p>
 
 
-            <br>
+            <br><br>
 
 
             <p>
 
-                Keep smiling.
-                Keep dreaming.
-                Keep being exactly yourself.
+                I know I am not perfect and I make mistakes but I promise I will always try to improve myself
+                and become better every single day just for you.
+                And your caring nature is something I love so much.
+                Sometimes you care for me like my mom.
+                You keep asking if I am okay if I ate properly if I am taking care of myself and so many small
+                small things.
+                All these small things make me feel so loved and special.
+                You dont even realise how much your care means to me.
+                And obviously how can I forget your food.
+                Your tasty food is literally bomb for me.
+                I dont know what magic you put in it but whatever you make always feels so tasty to me.
+                One day I will proudly tell everyone that my Raddu Raani makes the best food in the whole
+                world.
 
             </p>
 
 
-            <br>
+            <br><br>
 
 
             <p>
 
-                Thank you for being a beautiful
-                part of my world.
+                I am already excited for all the food I am going to eat after our marriage.
+                I am also very excited for our future together.
+                I am so excited to welcome you in Hira family and see you becoming such a beautiful part of
+                my family.
+                I want both our families to be together happy and make so many beautiful memories
+                together.
+                And honestly I am so excited for our marriage life.
+                I think about it sometimes and it makes me smile.
+                Our own home waking up together fighting over stupid things laughing together irritating
+                each other eating together supporting each other taking care of each other and just living our
+                life together.
+                I dont know exactly how our future will be but I know one thing that I want you to be there
+                with me in it.
 
             </p>
 
 
-            <br>
+            <br><br>
 
 
             <p>
 
-                Here's to another year full
-                of laughter, adventures,
-                happiness and memories
-                worth keeping.
+                I want to grow with you and experience everything with you.
+                The good days the bad days the problems the happiness everything.
+                My Mithurii thank you for coming into my life thank you for staying with me and thank you for
+                always supporting me.
+                I really really love you and I hope I can always make you feel how important you are for me.
+                Once again happy birthday my Raddiyaaa my Raddu Raani my Cutie Pie my Kalejaaaa.
+                Please always keep smiling and stay the same crazy caring and beautiful girl you are.
+                I love you sooo muchhh.
+                And yes future Mrs Hira I am already waiting for our future and our marriage life.
 
             </p>
 
@@ -1698,13 +1793,8 @@ h2 {
 
 
 /* =========================================================
-   ⭐⭐⭐ YOUR PHOTOS + VIDEOS ⭐⭐⭐
-=========================================================
-
-   Add as many photos/videos as you want.
-
+   YOUR PHOTOS + VIDEOS
 ========================================================= */
-
 
 const memories = [
 
@@ -1765,83 +1855,49 @@ const memories = [
 ];
 
 
-
 /* =========================================================
-   ⭐⭐⭐ IMAGES FOR "PICK ONE MEMORY" ⭐⭐⭐
-
-   You can add as many as you want.
-
+   IMAGES FOR PICK ONE MEMORY
 ========================================================= */
-
 
 const pickImages = [
 
     {
         src: "images/pick1.jpg",
         title: "",
-        message:
-            ""
+        message: ""
     },
-
 
     {
-        src: "",
+        src: "images/pick2.jpg",
         title: "",
-        message:
-            ""
+        message: ""
     },
-
 
     {
         src: "images/pick3.jpg",
         title: "",
-        message:
-            ""
+        message: ""
     },
-
 
     {
         src: "images/pick4.jpg",
         title: "",
-        message:
-            ""
+        message: ""
     },
- {
-           src: "images/pick5.jpg",
-           title: "",
-           message:
-               ""
-       },
- {
-           src: "images/pick5.jpg",
-           title: "",
-           message:
-               ""
-       },
 
+    {
+        src: "images/pick5.jpg",
+        title: "",
+        message: ""
+    },
 
-
-    /*
-       ADD MORE IMAGES HERE
-
-       {
-           src: "images/pick5.jpg",
-           title: "Another Memory",
-           message:
-               "A beautiful memory just for you. ♡"
-       },
-
-       {
-           src: "images/pick6.jpg",
-           title: "One More Moment",
-           message:
-               "This moment is worth remembering forever. ♥"
-       }
-
-    */
+    {
+        src: "images/pick5.jpg",
+        title: "",
+        message: ""
+    }
 
 ];
-
 
 
 /* =========================================================
@@ -1850,167 +1906,114 @@ const pickImages = [
 
 function createAlbum() {
 
-
     const album =
-        document.getElementById(
-            "album"
-        );
-
+        document.getElementById("album");
 
     album.innerHTML = "";
 
+    memories.forEach(function(memory) {
 
-    memories.forEach(
-        function(memory) {
+        const card =
+            document.createElement("div");
 
-
-            const card =
-                document.createElement(
-                    "div"
-                );
+        card.className =
+            "memory-card";
 
 
-            card.className =
-                "memory-card";
+        /* IMAGE */
 
+        if(memory.type === "image") {
 
-            /* IMAGE */
+            const image =
+                document.createElement("img");
 
-            if(
-                memory.type === "image"
-            ) {
+            image.src =
+                memory.src;
 
-
-                const image =
-                    document.createElement(
-                        "img"
-                    );
-
-
-                image.src =
-                    memory.src;
-
-
-                image.alt =
-                    memory.title;
-
-
-                image.className =
-                    "memory-image";
-
-
-                card.appendChild(
-                    image
-                );
-
-            }
-
-
-            /* VIDEO */
-
-            else {
-
-
-                const video =
-                    document.createElement(
-                        "video"
-                    );
-
-
-                video.src =
-                    memory.src;
-
-
-                video.className =
-                    "memory-video";
-
-
-                video.muted =
-                    true;
-
-
-                video.loop =
-                    true;
-
-
-                video.playsInline =
-                    true;
-
-
-                card.appendChild(
-                    video
-                );
-
-            }
-
-
-            /* TITLE */
-
-            const title =
-                document.createElement(
-                    "div"
-                );
-
-
-            title.className =
-                "memory-title";
-
-
-            title.textContent =
+            image.alt =
                 memory.title;
 
+            image.className =
+                "memory-image";
 
-            card.appendChild(
-                title
-            );
-
-
-            /* TYPE */
-
-            const type =
-                document.createElement(
-                    "span"
-                );
-
-
-            type.className =
-                "memory-type";
-
-
-            type.textContent =
-                memory.type === "image"
-
-                ? "PHOTO • TAP TO VIEW"
-
-                : "VIDEO • TAP TO PLAY";
-
-
-            card.appendChild(
-                type
-            );
-
-
-            /* OPEN */
-
-            card.addEventListener(
-                "click",
-                function() {
-
-                    openMedia(memory);
-
-                }
-            );
-
-
-            album.appendChild(
-                card
-            );
+            card.appendChild(image);
 
         }
-    );
+
+
+        /* VIDEO */
+
+        else {
+
+            const video =
+                document.createElement("video");
+
+            video.src =
+                memory.src;
+
+            video.className =
+                "memory-video";
+
+            video.muted = true;
+
+            video.loop = true;
+
+            video.playsInline = true;
+
+            card.appendChild(video);
+
+        }
+
+
+        /* TITLE */
+
+        const title =
+            document.createElement("div");
+
+        title.className =
+            "memory-title";
+
+        title.textContent =
+            memory.title;
+
+        card.appendChild(title);
+
+
+        /* TYPE */
+
+        const type =
+            document.createElement("span");
+
+        type.className =
+            "memory-type";
+
+        type.textContent =
+            memory.type === "image"
+
+            ? "PHOTO • TAP TO VIEW"
+
+            : "VIDEO • TAP TO PLAY";
+
+        card.appendChild(type);
+
+
+        /* OPEN */
+
+        card.addEventListener(
+            "click",
+            function() {
+
+                openMedia(memory);
+
+            }
+        );
+
+
+        album.appendChild(card);
+
+    });
 
 }
-
 
 
 /* =========================================================
@@ -2019,25 +2022,16 @@ function createAlbum() {
 
 function createPickImages() {
 
-
     const container =
-        document.getElementById(
-            "imagePicks"
-        );
-
+        document.getElementById("imagePicks");
 
     container.innerHTML = "";
-
 
     pickImages.forEach(
         function(item,index) {
 
-
             const card =
-                document.createElement(
-                    "div"
-                );
-
+                document.createElement("div");
 
             card.className =
                 "pick-card";
@@ -2046,68 +2040,46 @@ function createPickImages() {
             /* IMAGE */
 
             const image =
-                document.createElement(
-                    "img"
-                );
-
+                document.createElement("img");
 
             image.src =
                 item.src;
 
-
             image.alt =
                 item.title;
-
 
             image.className =
                 "pick-image";
 
-
-            card.appendChild(
-                image
-            );
+            card.appendChild(image);
 
 
             /* CHECK MARK */
 
             const check =
-                document.createElement(
-                    "div"
-                );
-
+                document.createElement("div");
 
             check.className =
                 "pick-check";
 
-
             check.textContent =
                 "✓";
 
-
-            card.appendChild(
-                check
-            );
+            card.appendChild(check);
 
 
             /* TITLE */
 
             const title =
-                document.createElement(
-                    "div"
-                );
-
+                document.createElement("div");
 
             title.className =
                 "pick-title";
 
-
             title.textContent =
                 item.title;
 
-
-            card.appendChild(
-                title
-            );
+            card.appendChild(title);
 
 
             /* CLICK */
@@ -2125,15 +2097,12 @@ function createPickImages() {
             );
 
 
-            container.appendChild(
-                card
-            );
+            container.appendChild(card);
 
         }
     );
 
 }
-
 
 
 /* =========================================================
@@ -2149,16 +2118,12 @@ function selectPickImage(
     /* Remove previous selection */
 
     document
-        .querySelectorAll(
-            ".pick-card"
-        )
+        .querySelectorAll(".pick-card")
         .forEach(
             function(element) {
 
                 element.classList
-                    .remove(
-                        "selected"
-                    );
+                    .remove("selected");
 
             }
         );
@@ -2166,9 +2131,7 @@ function selectPickImage(
 
     /* Select clicked card */
 
-    card.classList.add(
-        "selected"
-    );
+    card.classList.add("selected");
 
 
     /* Show selected image */
@@ -2203,9 +2166,7 @@ function selectPickImage(
         item.message;
 
 
-    selectedBox.classList.add(
-        "show"
-    );
+    selectedBox.classList.add("show");
 
 
     /* Show final letter button */
@@ -2221,15 +2182,11 @@ function selectPickImage(
 }
 
 
-
 /* =========================================================
    OPEN FULLSCREEN MEDIA
 ========================================================= */
 
-function openMedia(
-    memory
-) {
-
+function openMedia(memory) {
 
     const viewer =
         document.getElementById(
@@ -2254,28 +2211,18 @@ function openMedia(
 
     /* IMAGE */
 
-    if(
-        memory.type === "image"
-    ) {
-
+    if(memory.type === "image") {
 
         const image =
-            document.createElement(
-                "img"
-            );
-
+            document.createElement("img");
 
         image.src =
             memory.src;
 
-
         image.alt =
             memory.title;
 
-
-        content.appendChild(
-            image
-        );
+        content.appendChild(image);
 
     }
 
@@ -2284,32 +2231,19 @@ function openMedia(
 
     else {
 
-
         const video =
-            document.createElement(
-                "video"
-            );
-
+            document.createElement("video");
 
         video.src =
             memory.src;
 
+        video.controls = true;
 
-        video.controls =
-            true;
+        video.autoplay = true;
 
+        video.playsInline = true;
 
-        video.autoplay =
-            true;
-
-
-        video.playsInline =
-            true;
-
-
-        content.appendChild(
-            video
-        );
+        content.appendChild(video);
 
     }
 
@@ -2318,12 +2252,9 @@ function openMedia(
         memory.title;
 
 
-    viewer.classList.add(
-        "active"
-    );
+    viewer.classList.add("active");
 
 }
-
 
 
 /* =========================================================
@@ -2331,7 +2262,6 @@ function openMedia(
 ========================================================= */
 
 function closeViewer() {
-
 
     const viewer =
         document.getElementById(
@@ -2355,7 +2285,6 @@ function closeViewer() {
 }
 
 
-
 /* =========================================================
    SCREEN NAVIGATION
 ========================================================= */
@@ -2370,7 +2299,6 @@ let currentScreen = 0;
 
 
 function goTo(number) {
-
 
     if(
         number < 0 ||
@@ -2405,13 +2333,11 @@ function goTo(number) {
 }
 
 
-
 /* =========================================================
    BACK BUTTON
 ========================================================= */
 
 function goBack() {
-
 
     if(
         currentScreen <= 0
@@ -2429,13 +2355,11 @@ function goBack() {
 }
 
 
-
 /* =========================================================
    OPEN ENVELOPE
 ========================================================= */
 
 function openEnvelope() {
-
 
     const envelope =
         document.getElementById(
@@ -2463,13 +2387,11 @@ function openEnvelope() {
 }
 
 
-
 /* =========================================================
    FLOATING HEARTS
 ========================================================= */
 
 function createHearts() {
-
 
     const phone =
         document.getElementById(
@@ -2482,7 +2404,6 @@ function createHearts() {
         i < 8;
         i++
     ) {
-
 
         const heart =
             document.createElement(
@@ -2537,13 +2458,11 @@ function createHearts() {
 }
 
 
-
 /* =========================================================
    CONFETTI
 ========================================================= */
 
 function createConfetti() {
-
 
     const phone =
         document.getElementById(
@@ -2556,7 +2475,6 @@ function createConfetti() {
         i < 45;
         i++
     ) {
-
 
         const piece =
             document.createElement(
@@ -2617,13 +2535,11 @@ function createConfetti() {
 }
 
 
-
 /* =========================================================
    RESTART
 ========================================================= */
 
 function restart() {
-
 
     /* Envelope */
 
@@ -2645,9 +2561,7 @@ function restart() {
             function(card) {
 
                 card.classList
-                    .remove(
-                        "selected"
-                    );
+                    .remove("selected");
 
             }
         );
@@ -2674,7 +2588,6 @@ function restart() {
 }
 
 
-
 /* =========================================================
    CLICK OUTSIDE VIEWER TO CLOSE
 ========================================================= */
@@ -2686,7 +2599,6 @@ document
     .addEventListener(
         "click",
         function(event) {
-
 
             if(
                 event.target === this
@@ -2700,7 +2612,6 @@ document
     );
 
 
-
 /* =========================================================
    ESCAPE KEY
 ========================================================= */
@@ -2708,7 +2619,6 @@ document
 document.addEventListener(
     "keydown",
     function(event) {
-
 
         if(
             event.key === "Escape"
@@ -2722,7 +2632,6 @@ document.addEventListener(
         if(
             event.key === "Backspace"
         ) {
-
 
             if(
                 event.target.tagName !== "INPUT" &&
@@ -2739,7 +2648,6 @@ document.addEventListener(
 );
 
 
-
 /* =========================================================
    INITIALIZE
 ========================================================= */
@@ -2748,10 +2656,10 @@ createAlbum();
 
 createPickImages();
 
+
 </script>
 
 
 </body>
 
 </html>
-```
